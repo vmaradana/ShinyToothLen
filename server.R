@@ -47,7 +47,7 @@ shinyServer(function(input, output) {
         })
         
         output$lenRegPlot <- renderPlot({
-                if(grep("*",formulaText())!=0){
+                if(length(grep("\\*",formulaText())==1)){
                         g<-ggplot(tgData,aes(y=len,x=dose,colour=supp))
                         g<-g+geom_point(colour="grey50",size=5) + geom_smooth(method=lm,see=FALSE,colour="black") + geom_point(size=4)
                         g
