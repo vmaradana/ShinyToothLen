@@ -7,7 +7,6 @@
 require(shiny)
 require(datasets)
 require(ggplot2)
-require(GGally)
 
 tgData <- ToothGrowth 
 
